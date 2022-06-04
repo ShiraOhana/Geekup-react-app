@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Events() {
   return (
     <div>
-      Events
-      <Link to="/events">Events</Link>
+      <p> Events</p>
+      <Link to="/home">Events</Link>
     </div>
   );
 }
