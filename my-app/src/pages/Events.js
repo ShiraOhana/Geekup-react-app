@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
+import { AppData } from "../App";
 
 function Events() {
-  const [events, setEvent] = useState([]);
-  const [filters, setFilters] = useState({ online: "any", recent: true });
+  const { events, setEvent, filters, setFilters } = useContext(AppData);
   const { online } = filters;
   useEffect(() => {
     search(online);
@@ -29,8 +29,8 @@ function Events() {
 
   return (
     <div className="container">
+      <h1>Events and Meetups</h1>
       <div>
-        <h3>Filters</h3>
         <select onChange={handleChange}>
           <option value="any">Any</option>
           <option value={true}>Online</option>
