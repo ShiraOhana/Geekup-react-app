@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
 import { AppData } from "../App";
@@ -10,6 +10,7 @@ function Events() {
   useEffect(() => {
     search(online);
   }, [online]);
+  let navigate = useNavigate();
 
   const search = async (isOnline) => {
     let query = "";
@@ -40,7 +41,12 @@ function Events() {
 
       <div className="grid">
         {events.map((event) => (
-          <div className="card">
+          <div
+            className="card"
+            onClick={() => {
+              navigate(`/event/${event.id}`);
+            }}
+          >
             <h3> {event.title}</h3>
             <p>{moment(event.date).format("MMMM Do YYYY, h:mm a")}</p>
             <p>{event.country}</p>
