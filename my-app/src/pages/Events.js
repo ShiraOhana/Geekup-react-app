@@ -5,21 +5,39 @@ import moment from "moment";
 
 function Events() {
   const [events, setEvent] = useState([]);
-
+  const [filters, setFilters] = useState({ online: "any", recent: true });
+  const { online } = filters;
   useEffect(() => {
-    const search = async () => {
-      const { data } = await axios.get(
-        "https://629b7c06cf163ceb8d1a51ed.mockapi.io/meetings/meetup/"
-      );
-      console.log(data);
-      setEvent(data);
-    };
-    search();
-  }, []);
+    search(online);
+  }, [online]);
+
+  const search = async (isOnline) => {
+    let query = "";
+    if (isOnline !== "any") {
+      query = query + `Online=${isOnline}`;
+    }
+    const { data } = await axios.get(
+      `https://629b7c06cf163ceb8d1a51ed.mockapi.io/meetings/meetup?${query}`
+    );
+    setEvent(data);
+  };
+  const handleChange = (e) => {
+    setFilters((prev) => {
+      return { ...prev, online: e.target.value };
+    });
+  };
 
   return (
     <div className="container">
-      <select></select>
+      <div>
+        <h3>Filters</h3>
+        <select onChange={handleChange}>
+          <option value="any">Any</option>
+          <option value={true}>Online</option>
+          <option value={false}>Offline</option>
+        </select>
+      </div>
+
       <div className="grid">
         {events.map((event) => (
           <div className="card">
