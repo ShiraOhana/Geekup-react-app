@@ -28,7 +28,7 @@ function Create() {
     array.push({ id: uni, Name: a, Age: b });
 
     // Redirecting to home page after creation done
-    history("/");
+    history("/board");
   };
 
   return (
@@ -67,7 +67,7 @@ function Create() {
         </Button>
 
         {/* Redirecting back to home page */}
-        <Link className="d-grid gap-2" to="/">
+        <Link className="d-grid gap-2" to="/board">
           <Button variant="info" size="lg">
             Home
           </Button>
