@@ -29,6 +29,13 @@ function Event() {
             <img src={event.img} />
             <p>{event.description}</p>
             <p>Online: {event.Online ? "V" : "X"}</p>
+            <form>
+              <input type="text" placeholder="Name"></input> <br />
+              <input type="email" placeholder="Email"></input>
+              <br />
+              <input type="phone" placeholder="Phone Number"></input> <br />
+              <button>Submit</button>
+            </form>
           </div>
         ))}
     </div>

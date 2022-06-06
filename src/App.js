@@ -32,9 +32,9 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/board" element={<Board />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/event/:id" element={<Event />} />
             <Route path="/create" element={<Create />} />
             <Route path="/edit" element={<Edit />} />
-            <Route path="/event/:id" element={<Event />} />
           </Routes>
         </BrowserRouter>
       </div>
