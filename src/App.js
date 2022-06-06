@@ -1,12 +1,13 @@
 import "./App.css";
 import ReactDOM from "react-dom/client";
-
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Board from "./pages/Board";
 import Events from "./pages/Events";
 import Event from "./pages/Event";
+import Create from "./components/Create";
+import Edit from "./components/Edit";
 
 export const AppData = React.createContext();
 function App() {
@@ -31,6 +32,8 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/board" element={<Board />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/edit" element={<Edit />} />
             <Route path="/event/:id" element={<Event />} />
           </Routes>
         </BrowserRouter>
