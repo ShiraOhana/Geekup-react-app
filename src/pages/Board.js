@@ -18,7 +18,7 @@ function Board() {
   // Deleted function - functionality
   // for deleting the entry
   function deleted(id) {
-    var index = array
+    let index = array
       .map(function (e) {
         return e.id;
       })
