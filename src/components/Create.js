@@ -10,6 +10,8 @@ function Create() {
   // fetching a value in jsx
   const [name, setname] = useState("");
   const [age, setage] = useState("");
+  const [contact, setcontact] = useState("");
+  const [fandom, setfandom] = useState("");
 
   // Using useNavigation for redirecting to pages
   let history = useNavigate();
@@ -24,8 +26,10 @@ function Create() {
     // Fetching a value from usestate and
     // pushing to javascript object
     let a = name,
-      b = age;
-    array.push({ id: uni, Name: a, Age: b });
+      b = age,
+      c = contact,
+      d = fandom;
+    array.push({ id: uni, Name: a, Age: b, Contact: c, Fandom: d });
 
     // Redirecting to home page after creation done
     history("/board");
@@ -50,8 +54,24 @@ function Create() {
         <Form.Group className="mb-3" controlId="formBasicAge">
           <Form.Control
             onChange={(e) => setage(e.target.value)}
-            type="text"
+            type="number"
             placeholder="Age"
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicAge">
+          <Form.Control
+            onChange={(e) => setage(e.target.value)}
+            type="text"
+            placeholder="Contact info"
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicAge">
+          <Form.Control
+            onChange={(e) => setage(e.target.value)}
+            type="text"
+            placeholder="What's your fandom?"
             required
           />
         </Form.Group>
@@ -69,7 +89,7 @@ function Create() {
         {/* Redirecting back to home page */}
         <Link className="d-grid gap-2" to="/board">
           <Button variant="info" size="lg">
-            Home
+            Cancel
           </Button>
         </Link>
       </Form>

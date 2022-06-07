@@ -11,6 +11,8 @@ function Edit() {
   const [name, setname] = useState("");
   const [age, setage] = useState("");
   const [id, setid] = useState("");
+  const [contact, setcontact] = useState("");
+  const [fandom, setfandom] = useState("");
 
   // used for navigation with logic in javascript
   let history = useNavigate();
@@ -33,6 +35,8 @@ function Edit() {
     // replacing it from existing for updation
     a.Name = name;
     a.Age = age;
+    a.Contact = contact;
+    a.Fandom = fandom;
 
     // redirecting to main page
     history("/board");
@@ -43,6 +47,8 @@ function Edit() {
     setname(localStorage.getItem("Name"));
     setage(localStorage.getItem("Age"));
     setid(localStorage.getItem("id"));
+    setfandom(localStorage.getItem("Fandom"));
+    setcontact(localStorage.getItem("Contact"));
   }, []);
 
   return (

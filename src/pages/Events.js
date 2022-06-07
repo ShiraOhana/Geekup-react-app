@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
 import { AppData } from "../App";
+import imgData from "../components/imgData";
 
 function Events() {
   const { events, setEvent, filters, setFilters } = useContext(AppData);
@@ -11,7 +12,6 @@ function Events() {
     search(online);
   }, [online]);
   let navigate = useNavigate();
-
   const search = async (isOnline) => {
     let query = "";
     if (isOnline !== "any") {
@@ -50,7 +50,8 @@ function Events() {
             <h3> {event.title}</h3>
             <p>{moment(event.date).format("MMMM Do YYYY, h:mm a")}</p>
             <p>{event.country}</p>
-            <img src={event.img} />
+            {imgData.forEach((e) => `<img src=${e} />`)}
+
             <p>{event.description}</p>
             <p>Online: {event.Online ? "V" : "X"}</p>
           </div>

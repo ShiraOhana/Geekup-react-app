@@ -9,10 +9,12 @@ function Board() {
 
   // You may skip this part if you're
   // using react-context api or redux
-  function setID(id, name, age) {
+  function setID(id, name, age, contact, fandom) {
     localStorage.setItem("id", id);
     localStorage.setItem("Name", name);
     localStorage.setItem("Age", age);
+    localStorage.setItem("Contact", contact);
+    localStorage.setItem("Fandom", fandom);
   }
 
   // Deleted function - functionality
@@ -34,7 +36,7 @@ function Board() {
 
   return (
     <div className="board">
-      <h1>find your kind of people</h1>
+      <h1>Find your kind of people</h1>
 
       <div style={{ margin: "10rem" }}>
         <Table striped bordered hover size="sm">
@@ -42,6 +44,8 @@ function Board() {
             <tr>
               <th>Name</th>
               <th>Age</th>
+              <th>Contact</th>
+              <th>Fandom</th>
             </tr>
           </thead>
           <tbody>
@@ -52,13 +56,23 @@ function Board() {
                 <tr>
                   <td>{item.Name}</td>
                   <td>{item.Age}</td>
+                  <td>{item.Contact}</td>
+                  <td>{item.Fandom}</td>
 
                   {/* getting theid,name, and age for storing these
           value in the jsx with onclick event */}
                   <td>
                     <Link to={`/edit`}>
                       <Button
-                        onClick={(e) => setID(item.id, item.Name, item.Age)}
+                        onClick={(e) =>
+                          setID(
+                            item.id,
+                            item.Name,
+                            item.Age,
+                            item.Contact,
+                            item.Fandom
+                          )
+                        }
                         variant="info"
                       >
                         Update

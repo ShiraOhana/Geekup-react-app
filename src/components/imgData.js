@@ -21,3 +21,4 @@ const imgData = [
     img: "https://comicconbrussels.com/wp-content/uploads/2021/12/ticket-header-image-uai-516x344-1.jpg",
   },
 ];
+export default imgData;
