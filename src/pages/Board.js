@@ -100,7 +100,7 @@ function Board() {
    insertion of values */}
         <Link className="d-grid gap-2" to="/create">
           <Button variant="warning" size="lg">
-            Create
+            Don't be shy
           </Button>
         </Link>
       </div>

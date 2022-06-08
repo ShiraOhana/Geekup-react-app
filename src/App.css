@@ -149,3 +149,9 @@ h3 {
   width: 100vw;
   height: 100vh;
 }
+
+/* Event  */
+.event .card {
+  max-width: 50%;
+  margin: 0 auto;
+}
