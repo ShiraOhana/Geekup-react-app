@@ -9,6 +9,11 @@
   width: 100vw;
   height: 100vh;
 }
+.home .nav-links:hover {
+  color: purple;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 500ms ease-in-out;
+}
 h1 {
   padding: 0;
   margin: 0;
@@ -19,7 +24,7 @@ header {
   align-items: center;
   padding: 30px 10%;
 }
-.nav-links {
+.home .nav-links {
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
