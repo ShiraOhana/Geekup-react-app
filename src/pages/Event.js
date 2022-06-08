@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { AppData } from "../App";
 import moment from "moment";
 import axios from "axios";
+import imgData from "../components/imgData";
 
 function Event() {
   const { events, setEvent } = useContext(AppData);
@@ -17,6 +18,14 @@ function Event() {
       })();
     }
   }, []);
+
+  const getImg = () => {
+    const rand = Math.floor(
+      Math.random(0, imgData.length - 1) * imgData.length
+    );
+    const img = imgData[rand].img;
+    return img;
+  };
   return (
     <div className="event">
       {events
@@ -26,7 +35,7 @@ function Event() {
             <h3> {event.title}</h3>
             <p>{moment(event.date).format("MMMM Do YYYY, h:mm a")}</p>
             <p>{event.country}</p>
-            <img src={event.img} />
+            {imgData && <img src={getImg()} />}
             <p>{event.description}</p>
             <p>Online: {event.Online ? "V" : "X"}</p>
             <form>

@@ -33,7 +33,6 @@ function Events() {
       Math.random(0, imgData.length - 1) * imgData.length
     );
     const img = imgData[rand].img;
-
     return img;
   };
   return (
