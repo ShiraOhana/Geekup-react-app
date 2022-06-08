@@ -28,36 +28,46 @@ function Events() {
     });
   };
 
+  const getImg = () => {
+    const rand = Math.floor(
+      Math.random(0, imgData.length - 1) * imgData.length
+    );
+    const img = imgData[rand].img;
+
+    return img;
+  };
   return (
-    <div className="container">
-      <h1>Events and Meetups</h1>
-      <div>
-        <select onChange={handleChange}>
-          <option value="any">Any</option>
-          <option value={true}>Online</option>
-          <option value={false}>Offline</option>
-        </select>
-      </div>
+    <div className="events">
+      <div className="container">
+        <h1>Events and Meetups</h1>
+        <div>
+          <select onChange={handleChange}>
+            <option value="any">Any</option>
+            <option value={true}>Online</option>
+            <option value={false}>Offline</option>
+          </select>
+        </div>
+        <div className="grid">
+          {events.map((event, i) => (
+            <div
+              className="card"
+              onClick={() => {
+                navigate(`/event/${event.id}`);
+              }}
+            >
+              <h3> {event.title}</h3>
+              <p>{moment(event.date).format("MMMM Do YYYY, h:mm a")}</p>
+              <p>{event.country}</p>
 
-      <div className="grid">
-        {events.map((event) => (
-          <div
-            className="card"
-            onClick={() => {
-              navigate(`/event/${event.id}`);
-            }}
-          >
-            <h3> {event.title}</h3>
-            <p>{moment(event.date).format("MMMM Do YYYY, h:mm a")}</p>
-            <p>{event.country}</p>
-            {imgData.forEach((e) => `<img src=${e} />`)}
+              {imgData && <img src={getImg()} />}
 
-            <p>{event.description}</p>
-            <p>Online: {event.Online ? "V" : "X"}</p>
-          </div>
-        ))}
+              <p>{event.description}</p>
+              <p>Online: {event.Online ? "V" : "X"}</p>
+            </div>
+          ))}
+        </div>
+        <Link to="/home">Back Home</Link>
       </div>
-      <Link to="/home">Back Home</Link>
     </div>
   );
 }

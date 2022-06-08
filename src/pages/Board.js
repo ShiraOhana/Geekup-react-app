@@ -44,7 +44,7 @@ function Board() {
             <tr>
               <th>Name</th>
               <th>Age</th>
-              <th>Contact</th>
+              <th>Contact Info</th>
               <th>Fandom</th>
             </tr>
           </thead>

@@ -59,17 +59,17 @@ function Create() {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicAge">
+        <Form.Group className="mb-3" controlId="formBasicContact">
           <Form.Control
-            onChange={(e) => setage(e.target.value)}
+            onChange={(e) => setcontact(e.target.value)}
             type="text"
             placeholder="Contact info"
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicAge">
+        <Form.Group className="mb-3" controlId="formBasicFandom">
           <Form.Control
-            onChange={(e) => setage(e.target.value)}
+            onChange={(e) => setfandom(e.target.value)}
             type="text"
             placeholder="What's your fandom?"
             required

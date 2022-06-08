@@ -18,7 +18,7 @@ function Event() {
     }
   }, []);
   return (
-    <div>
+    <div className="event">
       {events
         .filter((event) => event.id === params.id)
         .map((event) => (

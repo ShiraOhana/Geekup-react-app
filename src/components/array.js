@@ -11,14 +11,21 @@ const array = [
     Name: "Eyal",
     Age: "26",
     Contact: "Facebook: Eyal Cohen",
-    Fandom: "Harry Potter",
+    Fandom: "Brandon Sanderson",
   },
   {
     id: "3",
     Name: "Lihi",
     Age: "23",
-    Contact: "gibli@gmail.com",
+    Contact: "ghibli@gmail.com",
     Fandom: "My hero academia",
+  },
+  {
+    id: "4",
+    Name: "Shira",
+    Age: "29",
+    Contact: "050-9507705",
+    Fandom: "Harry Potter",
   },
 ];
 export default array;

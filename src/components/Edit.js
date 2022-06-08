@@ -73,6 +73,22 @@ function Edit() {
             placeholder="Age"
           />
         </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasiccontact">
+          <Form.Control
+            value={contact}
+            onChange={(e) => setcontact(e.target.value)}
+            type="text"
+            placeholder="Contant info"
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicfandom">
+          <Form.Control
+            value={fandom}
+            onChange={(e) => setfandom(e.target.value)}
+            type="text"
+            placeholder="What's your fandom?"
+          />
+        </Form.Group>
 
         {/* Hadinling an onclick event running an edit logic */}
         <Button
