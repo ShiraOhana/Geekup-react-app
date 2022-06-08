@@ -32,6 +32,11 @@ h1 {
   padding: 0;
   margin: 0;
 }
+.explore-homepage {
+  text-align: center;
+  font-size: 40px;
+  font-family: poppins;
+}
 /* header {
   display: flex;
   justify-content: flex-end;
