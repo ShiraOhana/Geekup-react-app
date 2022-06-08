@@ -5,8 +5,17 @@ import "../App.css";
 function Home() {
   return (
     <div className="home">
-      <h1>Home</h1>
-      <Link to="/">Home</Link>
+      <header>
+        <ul>
+          <Link to="/events" className="nav-links">
+            Events
+          </Link>
+          <Link to="/board" className="nav-links">
+            Board
+          </Link>
+        </ul>
+      </header>
+      {/* <Link to="/">Home</Link> */}
     </div>
   );
 }

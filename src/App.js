@@ -18,16 +18,6 @@ function App() {
     <AppData.Provider value={{ events, setEvent, filters, setFilters }}>
       <div className="App">
         <BrowserRouter>
-          <header>
-            <ul>
-              <Link to="/events" className="nav-links">
-                Events
-              </Link>
-              <Link to="/board" className="nav-links">
-                Board
-              </Link>
-            </ul>
-          </header>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/board" element={<Board />} />
