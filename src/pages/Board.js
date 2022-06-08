@@ -3,6 +3,8 @@ import { Button, Table } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import array from "../components/array";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import "../App.css";
 
 function Board() {
   let history = useNavigate();
@@ -36,6 +38,7 @@ function Board() {
 
   return (
     <div className="board">
+      <Header />
       <h1>Find your kind of people</h1>
 
       <div style={{ margin: "10rem" }}>

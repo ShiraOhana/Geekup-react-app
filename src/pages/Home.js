@@ -3,11 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "../assets/logo.png";
+import Header from "../components/Header";
 
 function Home() {
   return (
     <div className="home">
-      <header>
+      <Header />
+      {/* <header>
         <ul className="navbar">
           <li>
             <img src={require("../assets/logo.png")} className="logo" />
@@ -26,7 +28,13 @@ function Home() {
             </ul>
           </li>
         </ul>
-      </header>
+      </header> */}
+
+      <div className="explore-homepage">
+        <p> Check out our events</p>
+        <button>Explore</button>{" "}
+      </div>
+
       {/* <Link to="/">Home</Link> */}
     </div>
   );

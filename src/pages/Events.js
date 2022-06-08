@@ -4,6 +4,7 @@ import axios from "axios";
 import moment from "moment";
 import { AppData } from "../App";
 import imgData from "../components/imgData";
+import Header from "../components/Header";
 import "../App.css";
 
 function Events() {
@@ -38,6 +39,7 @@ function Events() {
   };
   return (
     <div className="events">
+      <Header />
       <div className="container">
         <h1>Events and Meetups</h1>
         <div>

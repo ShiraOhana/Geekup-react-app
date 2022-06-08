@@ -4,6 +4,8 @@ import { AppData } from "../App";
 import moment from "moment";
 import axios from "axios";
 import imgData from "../components/imgData";
+import Header from "../components/Header";
+
 import "../App.css";
 
 function Event() {
@@ -29,6 +31,10 @@ function Event() {
   };
   return (
     <div className="event">
+      <div>
+        {" "}
+        <Header />
+      </div>
       {events
         .filter((event) => event.id === params.id)
         .map((event) => (
