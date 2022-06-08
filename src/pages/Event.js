@@ -4,6 +4,7 @@ import { AppData } from "../App";
 import moment from "moment";
 import axios from "axios";
 import imgData from "../components/imgData";
+import "../App.css";
 
 function Event() {
   const { events, setEvent } = useContext(AppData);
