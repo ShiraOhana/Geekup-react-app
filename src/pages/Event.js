@@ -30,7 +30,7 @@ function Event() {
     return img;
   };
   return (
-    <div className="event">
+    <div className="event bcg-img">
       <div>
         {" "}
         <Header />
@@ -40,16 +40,26 @@ function Event() {
         .map((event) => (
           <div className="card">
             <h3> {event.title}</h3>
-            <p>{moment(event.date).format("MMMM Do YYYY, h:mm a")}</p>
-            <p>{event.country}</p>
+            <p className="date-location">
+              {moment(event.date).format("MMMM Do YYYY, h:mm a")}
+            </p>
+            <p className="date-location">{event.country}</p>
             {imgData && <img src={getImg()} />}
-            <p>{event.description}</p>
-            <p>Online: {event.Online ? "V" : "X"}</p>
+            <p>
+              {" "}
+              <span className="underline">About the event:</span> <br />
+              {event.description}
+            </p>
+            <p>Online: {event.Online ? "Yes" : "No"}</p>
             <form>
+              <hr />
+              <h3>Sign up to this event</h3>
               <input type="text" placeholder="Name"></input> <br />
               <input type="email" placeholder="Email"></input>
               <br />
               <input type="phone" placeholder="Phone Number"></input> <br />
+              <input type="number" placeholder="Number of tickets"></input>{" "}
+              <br />
               <button>Submit</button>
             </form>
           </div>
