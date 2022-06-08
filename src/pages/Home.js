@@ -9,6 +9,7 @@ function Home() {
     <div className="home">
       <Header />
       <div className="explore-homepage">
+        <h1>The place for meeting geeks</h1>
         <p> Check out new events</p>{" "}
         <Link to="/events" className="explore-link">
           Explore{" "}

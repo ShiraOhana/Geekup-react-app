@@ -58,17 +58,27 @@ function Events() {
               }}
             >
               <h3> {event.title}</h3>
-              <p>{moment(event.date).format("MMMM Do YYYY, h:mm a")}</p>
-              <p>{event.country}</p>
+              <p className="date-location">
+                {moment(event.date).format("MMMM Do YYYY, h:mm a")}
+              </p>
+              <p className="date-location">{event.country}</p>
 
               {imgData && <img src={getImg()} />}
 
-              <p>{event.description}</p>
-              <p>Online: {event.Online ? "V" : "X"}</p>
+              <p>
+                <span className="underline">About the event:</span> <br />
+                {event.description}
+              </p>
+              <p>
+                {" "}
+                <span className="date-location">Online:</span>{" "}
+                {event.Online ? "Yes" : "No"}
+              </p>
+              <button>Click for more info</button>
             </div>
           ))}
         </div>
-        <Link to="/home">Back Home</Link>
+        <Link to="/">Back Home</Link>
       </div>
     </div>
   );
