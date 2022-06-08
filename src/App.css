@@ -15,11 +15,11 @@
   width: 100vw;
   height: 100vh;
 }
-.events {
-  background: url(./assets/eventsbcg.jpg) no-repeat center center/cover;
-  width: 100vw;
-  height: 100vh;
-  background-attachment: scroll;
+.bcg-img {
+  background: url(./assets/eventsbcg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .logo {

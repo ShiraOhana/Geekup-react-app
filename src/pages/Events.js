@@ -39,46 +39,48 @@ function Events() {
   };
   return (
     <div className="events">
-      <Header />
-      <div className="container">
-        <h1>Events and Meetups</h1>
-        <div>
-          <select onChange={handleChange}>
-            <option value="any">Any</option>
-            <option value={true}>Online</option>
-            <option value={false}>Offline</option>
-          </select>
-        </div>
-        <div className="grid">
-          {events.map((event, i) => (
-            <div
-              className="card"
-              onClick={() => {
-                navigate(`/event/${event.id}`);
-              }}
-            >
-              <h3> {event.title}</h3>
-              <p className="date-location">
-                {moment(event.date).format("MMMM Do YYYY, h:mm a")}
-              </p>
-              <p className="date-location">{event.country}</p>
+      <div className="bcg-img">
+        <Header />
+        <div className="container">
+          <h1>Events and Meetups</h1>
+          <div>
+            <select onChange={handleChange}>
+              <option value="any">Any</option>
+              <option value={true}>Online</option>
+              <option value={false}>Offline</option>
+            </select>
+          </div>
+          <div className="grid">
+            {events.map((event, i) => (
+              <div
+                className="card"
+                onClick={() => {
+                  navigate(`/event/${event.id}`);
+                }}
+              >
+                <h3> {event.title}</h3>
+                <p className="date-location">
+                  {moment(event.date).format("MMMM Do YYYY, h:mm a")}
+                </p>
+                <p className="date-location">{event.country}</p>
 
-              {imgData && <img src={getImg()} />}
+                {imgData && <img src={getImg()} />}
 
-              <p>
-                <span className="underline">About the event:</span> <br />
-                {event.description}
-              </p>
-              <p>
-                {" "}
-                <span className="date-location">Online:</span>{" "}
-                {event.Online ? "Yes" : "No"}
-              </p>
-              <button>Click for more info</button>
-            </div>
-          ))}
+                <p>
+                  <span className="underline">About the event:</span> <br />
+                  {event.description}
+                </p>
+                <p>
+                  {" "}
+                  <span className="date-location">Online:</span>{" "}
+                  {event.Online ? "Yes" : "No"}
+                </p>
+                <button>Click for more info</button>
+              </div>
+            ))}
+          </div>
+          <Link to="/">Back Home</Link>
         </div>
-        <Link to="/">Back Home</Link>
       </div>
     </div>
   );
