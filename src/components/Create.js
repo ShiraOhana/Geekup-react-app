@@ -36,63 +36,67 @@ function Create() {
   };
 
   return (
-    <div>
-      <Form className="d-grid gap-2" style={{ margin: "15rem" }}>
-        {/* Fetching a value from input textfirld
+    <div className="create-page">
+      <div>
+        <Form className="d-grid gap-2" style={{ margin: "8rem" }}>
+          <h1>Tell us about yourself</h1>
+
+          {/* Fetching a value from input textfirld
    in a setname using usestate*/}
-        <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Control
-            onChange={(e) => setname(e.target.value)}
-            type="text"
-            placeholder="Enter Name"
-            required
-          />
-        </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicName">
+            <Form.Control
+              onChange={(e) => setname(e.target.value)}
+              type="text"
+              placeholder="Enter Name"
+              required
+            />
+          </Form.Group>
 
-        {/* Fetching a value from input textfirld in
+          {/* Fetching a value from input textfirld in
      a setage using usestate*/}
-        <Form.Group className="mb-3" controlId="formBasicAge">
-          <Form.Control
-            onChange={(e) => setage(e.target.value)}
-            type="number"
-            placeholder="Age"
-            required
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicContact">
-          <Form.Control
-            onChange={(e) => setcontact(e.target.value)}
-            type="text"
-            placeholder="Contact info"
-            required
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicFandom">
-          <Form.Control
-            onChange={(e) => setfandom(e.target.value)}
-            type="text"
-            placeholder="What's your fandom?"
-            required
-          />
-        </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicAge">
+            <Form.Control
+              onChange={(e) => setage(e.target.value)}
+              type="number"
+              placeholder="Age"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicContact">
+            <Form.Control
+              onChange={(e) => setcontact(e.target.value)}
+              type="text"
+              placeholder="Contact info"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicFandom">
+            <Form.Control
+              onChange={(e) => setfandom(e.target.value)}
+              type="text"
+              placeholder="What's your fandom?"
+              required
+            />
+          </Form.Group>
 
-        {/* handing a onclick event in button for
+          {/* handing a onclick event in button for
      firing a function */}
-        <Button
-          onClick={(e) => handelSubmit(e)}
-          variant="primary"
-          type="submit"
-        >
-          Submit
-        </Button>
-
-        {/* Redirecting back to home page */}
-        <Link className="d-grid gap-2" to="/board">
-          <Button variant="info" size="lg">
-            Cancel
+          <Button
+            onClick={(e) => handelSubmit(e)}
+            variant="primary"
+            type="submit"
+          >
+            Submit
           </Button>
-        </Link>
-      </Form>
+
+          {/* Redirecting back to home page */}
+          <Link className="d-grid gap-2 cancel-btn" to="/board">
+            <Button variant="info" size="lg">
+              Cancel
+            </Button>
+          </Link>
+        </Form>
+      </div>
     </div>
   );
 }
