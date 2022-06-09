@@ -161,15 +161,14 @@ h3 {
   text-align: center;
   color: #9f6dde;
   font-weight: bold;
+  padding-top: 10px;
 }
 th,
 td {
   background-color: #fff;
   color: #9f6dde;
 }
-.hehe {
-  background-color: #9f6dde;
-}
+
 /* Event  */
 .event .card {
   max-width: 50%;

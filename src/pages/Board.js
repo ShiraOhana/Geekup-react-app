@@ -41,7 +41,7 @@ function Board() {
       <Header />
       <h1>Find your kind of people</h1>
 
-      <div style={{ margin: "10rem" }}>
+      <div style={{ margin: "6rem", textAlign: "center" }}>
         <Table striped bordered hover size="sm" variant="light">
           <thead>
             <tr>
