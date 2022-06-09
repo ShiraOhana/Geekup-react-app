@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import array from "../components/array";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 import "../App.css";
 
 function Board() {
@@ -41,7 +43,7 @@ function Board() {
       <Header />
       <h1>Find your kind of people</h1>
 
-      <div style={{ margin: "6rem", textAlign: "center" }}>
+      <div style={{ margin: "9rem", textAlign: "center" }}>
         <Table striped bordered hover size="sm" variant="light">
           <thead>
             <tr>
@@ -106,6 +108,7 @@ function Board() {
           </Button>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 }

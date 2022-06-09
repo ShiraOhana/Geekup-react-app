@@ -5,6 +5,8 @@ import moment from "moment";
 import { AppData } from "../App";
 import imgData from "../components/imgData";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 import "../App.css";
 
 function Events() {
@@ -82,6 +84,7 @@ function Events() {
           <Link to="/">Back Home</Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import moment from "moment";
 import axios from "axios";
 import imgData from "../components/imgData";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import "../App.css";
 
@@ -64,6 +65,7 @@ function Event() {
             </form>
           </div>
         ))}
+      <Footer />
     </div>
   );
 }

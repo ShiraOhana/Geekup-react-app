@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -48,6 +49,7 @@ function Home() {
           </Col>
         </Row>
       </div>
+      <Footer />
     </div>
   );
 }
