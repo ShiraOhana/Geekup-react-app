@@ -42,13 +42,15 @@ function Board() {
       <h1>Find your kind of people</h1>
 
       <div style={{ margin: "10rem" }}>
-        <Table striped bordered hover size="sm">
+        <Table striped bordered hover size="sm" variant="light">
           <thead>
             <tr>
               <th>Name</th>
               <th>Age</th>
               <th>Contact Info</th>
               <th>Fandom</th>
+              <th>Update</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -99,7 +101,7 @@ function Board() {
         {/* Button for redirecting to create page for
    insertion of values */}
         <Link className="d-grid gap-2" to="/create">
-          <Button variant="warning" size="lg">
+          <Button variant="primary" size="lg">
             Don't be shy
           </Button>
         </Link>

@@ -160,10 +160,15 @@ h3 {
 .board h1 {
   text-align: center;
   color: #9f6dde;
+  font-weight: bold;
 }
-th {
+th,
+td {
   background-color: #fff;
   color: #9f6dde;
+}
+.hehe {
+  background-color: #9f6dde;
 }
 /* Event  */
 .event .card {
