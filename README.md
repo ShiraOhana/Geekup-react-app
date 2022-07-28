@@ -23,3 +23,5 @@ I decided to build such a site myself and to add a board for people to find and 
 ## Website Link :point_down:
 [Geekup website](https://geekup.netlify.app/)
 
+## Spoilers: 
+  ![Website screenshot](./geekupscreenshot.png)
