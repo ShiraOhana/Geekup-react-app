@@ -148,6 +148,7 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
+
 .container {
   margin: 0 auto;
 }
@@ -158,15 +159,14 @@ h3 {
   margin: 10px;
   border: #404244;
   box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+  justify-content: space-around;
 }
 .card img {
   width: 100%;
   border-radius: 7px;
   margin-bottom: 10px;
 }
-.card-buttom {
-  justify-content: space-between;
-}
+
 .card button {
   background-color: #fff;
   border: 1px solid #9f6dde;
@@ -174,11 +174,17 @@ h3 {
   color: #9f6dde;
   padding: 10px 25px;
   width: 100%;
+  text-decoration: none;
 }
 .card button:hover {
   color: #fff;
   background-color: #9f6dde;
   transition: all 300ms ease-in-out;
+  text-decoration: none;
+}
+.back-home a {
+  padding: 10px 20px;
+  margin: 10px;
 }
 .date-location {
   color: grey;
@@ -212,7 +218,8 @@ td {
 .event input {
   margin: 10px;
 }
-.event button:hover {
+.event button:hover,
+.back-home:hover {
   color: #fff;
   background-color: #9f6dde;
   transition: all 300ms ease-in-out;
@@ -225,6 +232,23 @@ td {
 }
 .cancel-btn {
   text-decoration: none;
+}
+
+.back-home {
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border: 1px solid #9f6dde;
+  border-radius: 6px;
+  opacity: 90%;
+}
+.back-home a {
+  color: #9f6dde;
+  text-decoration: none;
+}
+.back-home:hover,
+.back-home a:hover {
+  color: #fff;
 }
 
 /* @media only screen and (min-width: 601px) {
@@ -283,6 +307,7 @@ td {
   margin: 0 0 10px;
   padding: 0;
   transition: ease 0.25s;
+  text-decoration: none;
 }
 
 .footer-distributed p.footer-links a {
@@ -294,12 +319,13 @@ td {
 }
 
 .footer-distributed .footer-links a:before {
-  content: "·";
+  content: " ";
   font-size: 20px;
   left: 0;
   color: #fff;
   display: inline-block;
   padding-right: 5px;
+  padding-left: 5px;
 }
 
 .footer-distributed .footer-links .link-1:before {

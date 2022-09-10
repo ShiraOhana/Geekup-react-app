@@ -8,7 +8,9 @@ function Header() {
     <header>
       <ul className="navbar">
         <li>
-          <img src={require("../assets/logo.png")} className="logo" />
+          <a href="/">
+            <img src={require("../assets/logo.png")} className="logo" />
+          </a>
         </li>
         <li>
           <ul>

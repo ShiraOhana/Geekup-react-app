@@ -39,6 +39,7 @@ function Events() {
     const img = imgData[rand].img;
     return img;
   };
+
   return (
     <div className="events">
       <div className="bcg-img">
@@ -82,7 +83,9 @@ function Events() {
               </div>
             ))}
           </div>
-          <Link to="/">Back Home</Link>
+          <button className="back-home">
+            <a href="/">{/* <Link to="/">Back Home</Link> */}Back Home</a>
+          </button>
         </div>
       </div>
       <Footer />
