@@ -156,19 +156,24 @@ h3 {
   margin: 0 auto;
   padding: 10px;
   margin: 10px;
-  justify-content: space-between;
+  border: #404244;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
 }
 .card img {
   width: 100%;
   border-radius: 7px;
   margin-bottom: 10px;
 }
+.card-buttom {
+  justify-content: space-between;
+}
 .card button {
-  padding: 10px 25px;
+  background-color: #fff;
+  border: 1px solid #9f6dde;
   border-radius: 5px;
   color: #9f6dde;
-  border: 1px solid #9f6dde;
-  background-color: white;
+  padding: 10px 25px;
+  width: 100%;
 }
 .card button:hover {
   color: #fff;

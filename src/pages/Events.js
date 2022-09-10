@@ -67,17 +67,18 @@ function Events() {
                 <p className="date-location">{event.country}</p>
 
                 {imgData && <img src={getImg()} />}
-
-                <p>
-                  <span className="underline">About the event:</span> <br />
-                  {event.description}
-                </p>
-                <p>
-                  {" "}
-                  <span className="date-location">Online:</span>{" "}
-                  {event.Online ? "Yes" : "No"}
-                </p>
-                <button>Click for more info</button>
+                <div className="card-buttom">
+                  <p>
+                    <span className="underline">About the event:</span> <br />
+                    {event.description}
+                  </p>
+                  <p>
+                    {" "}
+                    <span className="date-location">Online:</span>{" "}
+                    {event.Online ? "Yes" : "No"}
+                  </p>
+                  <button>Click for more info</button>
+                </div>
               </div>
             ))}
           </div>
