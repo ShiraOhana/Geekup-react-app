@@ -156,6 +156,7 @@ h3 {
   margin: 0 auto;
   padding: 10px;
   margin: 10px;
+  justify-content: space-between;
 }
 .card img {
   width: 100%;
@@ -168,7 +169,6 @@ h3 {
   color: #9f6dde;
   border: 1px solid #9f6dde;
   background-color: white;
-  justify-content: end;
 }
 .card button:hover {
   color: #fff;
