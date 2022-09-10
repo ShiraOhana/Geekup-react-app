@@ -30,6 +30,11 @@ function Event() {
     const img = imgData[rand].img;
     return img;
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="event bcg-img">
       <div>
@@ -61,7 +66,7 @@ function Event() {
               <input type="phone" placeholder="Phone Number"></input> <br />
               <input type="number" placeholder="Number of tickets"></input>{" "}
               <br />
-              <button>Submit</button>
+              <button onSubmit={handleSubmit}>Submit</button>
             </form>
           </div>
         ))}
