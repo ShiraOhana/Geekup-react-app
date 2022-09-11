@@ -7,7 +7,7 @@ import imgData from "../components/imgData";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import "../App.css";
+import "../css/App.css";
 
 function Event() {
   const { events, setEvent } = useContext(AppData);

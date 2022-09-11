@@ -1,0 +1,56 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+}
+.card {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  margin: 10px;
+  border: #404244;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+  justify-content: space-around;
+}
+.card img {
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #fff;
+  border: 1px solid #9f6dde;
+  border-radius: 5px;
+  color: #9f6dde;
+  padding: 10px 25px;
+  width: 100%;
+  text-decoration: none;
+}
+.card button:hover {
+  color: #fff;
+  background-color: #9f6dde;
+  transition: all 300ms ease-in-out;
+  text-decoration: none;
+}
+.back-home a {
+  padding: 10px 20px;
+  margin: 10px;
+}
+.date-location {
+  color: grey;
+}
+.events select {
+  margin: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}

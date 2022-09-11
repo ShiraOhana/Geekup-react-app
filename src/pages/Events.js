@@ -7,7 +7,7 @@ import imgData from "../components/imgData";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import "../App.css";
+import "../css/events.css";
 
 function Events() {
   const { events, setEvent, filters, setFilters } = useContext(AppData);
