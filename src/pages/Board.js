@@ -11,8 +11,6 @@ import "../css/board.css";
 function Board() {
   let history = useNavigate();
 
-  // You may skip this part if you're
-  // using react-context api or redux
   function setID(id, name, age, contact, fandom) {
     localStorage.setItem("id", id);
     localStorage.setItem("Name", name);
@@ -43,7 +41,8 @@ function Board() {
       <Header />
       <h1>Find your kind of people</h1>
 
-      <div style={{ margin: "2rem", textAlign: "center" }}>
+      {/* <div style={{ margin: "2rem", textAlign: "center" }}> */}
+      <div style={{ margin: "10rem" }}>
         <Table striped bordered hover size="sm" variant="light">
           <thead>
             <tr>
