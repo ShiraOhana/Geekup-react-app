@@ -1,0 +1,21 @@
+/* .event-card {
+  padding: 5px;
+  margin: 40px;
+  border: 10px solid transparent;
+} */
+/* .event-card-wraper {
+  background-color: aqua;
+  max-width: 100%;
+} */
+.event .card {
+  max-width: 50%;
+  padding: 15px;
+  display: flex;
+  margin: 2rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .event .card {
+    max-width: 70%;
+  }
+}

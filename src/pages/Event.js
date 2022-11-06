@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import "../css/App.css";
+import "../css/event.css";
 
 function Event() {
   const { events, setEvent } = useContext(AppData);
@@ -41,35 +42,41 @@ function Event() {
         {" "}
         <Header />
       </div>
-      {events
-        .filter((event) => event.id === params.id)
-        .map((event) => (
-          <div className="card">
-            <h3> {event.title}</h3>
-            <p className="date-location">
-              {moment(event.date).format("MMMM Do YYYY, h:mm a")}
-            </p>
-            <p className="date-location">{event.country}</p>
-            {imgData && <img src={getImg()} />}
-            <p>
-              {" "}
-              <span className="underline">About the event:</span> <br />
-              {event.description}
-            </p>
-            <p>Online: {event.Online ? "Yes" : "No"}</p>
-            <form>
-              <hr />
-              <h3>Sign up to this event</h3>
-              <input type="text" placeholder="Name"></input> <br />
-              <input type="email" placeholder="Email"></input>
-              <br />
-              <input type="phone" placeholder="Phone Number"></input> <br />
-              <input type="number" placeholder="Number of tickets"></input>{" "}
-              <br />
-              <button onSubmit={handleSubmit}>Submit</button>
-            </form>
-          </div>
-        ))}
+      <div className="event-card-wraper">
+        {events
+          .filter((event) => event.id === params.id)
+          .map((event) => (
+            <div className="card event-card">
+              <h3> {event.title}</h3>
+              <p className="date-location">
+                {moment(event.date).format("MMMM Do YYYY, h:mm a")}
+              </p>
+              <p className="date-location">{event.country}</p>
+              {imgData && <img src={getImg()} />}
+              <p>
+                {" "}
+                <span className="underline">About the event:</span> <br />
+                {event.description}
+              </p>
+              <p>Online: {event.Online ? "Yes" : "No"}</p>
+              <form>
+                <hr />
+                <h3>Sign up to this event</h3>
+                <input type="text" placeholder="Name"></input> <br />
+                <input type="email" placeholder="Email"></input>
+                <br />
+                <input type="phone" placeholder="Phone Number"></input> <br />
+                <input
+                  type="number"
+                  placeholder="Number of tickets"
+                ></input>{" "}
+                <br />
+                <button onSubmit={handleSubmit}>Submit</button>
+              </form>
+            </div>
+          ))}
+      </div>
+
       <Footer />
     </div>
   );
